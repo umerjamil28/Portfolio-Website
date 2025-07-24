@@ -3,8 +3,8 @@ export const TsLogo = (props) => (
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={props.width || 100}
-      height={props.height || 100}
+      width={props.width || 48}
+      height={props.height || 48}
       viewBox="0 0 256 256"
       style={{ fill: "#3178c6", ...props.style }}
       {...props}
