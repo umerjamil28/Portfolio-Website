@@ -22,61 +22,40 @@ export default function SkillsTicker() {
     { src: "/make.svg", alt: "Make.com" },
   ];
 
-  const rowRef = useRef(null);
-  const [rowWidth, setRowWidth] = useState(0);
-
-  useEffect(() => {
-    if (rowRef.current) {
-      setRowWidth(rowRef.current.offsetWidth);
-    }
-  }, [skills.length]);
-
   return (
-    <section className="w-full flex justify-center items-center mt-12 py-8 bg-white overflow-hidden">
-      <div className="relative w-full">
-        <div
-          className="flex gap-18"
-          style={{
-            width: rowWidth ? rowWidth * 2 : 'auto',
-            animation: rowWidth ? `scroll ${10}s linear infinite` : 'none',
-            display: 'flex',
-            gap: '3rem',
-          }}
-        >
-          {/* First set of skills */}
-          <div ref={rowRef} style={{ display: 'flex', gap: '3rem' }}>
-            {skills.map((skill, index) => (
-              <img
-                key={`first-${index}`}
-                src={skill.src}
-                alt={skill.alt}
-                className="h-18 w-18 object-contain hover:grayscale-0 transition flex-shrink-0"
-              />
-            ))}
-          </div>
-          {/* Duplicate set for seamless loop */}
-          <div style={{ display: 'flex', gap: '3rem' }}>
-            {skills.map((skill, index) => (
-              <img
-                key={`second-${index}`}
-                src={skill.src}
-                alt={skill.alt}
-                className="h-16 w-16 object-contain hover:grayscale-0 transition flex-shrink-0"
-              />
+    <section className="max-w-6xl mx-auto py-18 px-4" id="skills">
+      <h3 className="text-4xl font-bold mb-4 text-center">Technical Skills</h3>
+      <div className="w-full overflow-hidden bg-white py-8">
+        <div className="relative w-full">
+          <div className="ticker-track flex items-center" style={{ animation: 'ticker 40s linear infinite' }}>
+            {[...skills, ...skills].map((skill, index) => (
+              <div key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '110px', marginRight: '3rem' }}>
+                <div style={{ background: '#fff', padding: '0.5rem', borderRadius: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+                  <img
+                    src={skill.src}
+                    alt={skill.alt}
+                    className="h-18 w-18 object-contain hover:grayscale-0 transition flex-shrink-0"
+                  />
+                </div>
+                <span style={{ marginTop: '0.5rem', fontSize: '1rem', fontWeight: 500, color: '#333', textAlign: 'center' }}>{skill.alt}</span>
+              </div>
             ))}
           </div>
         </div>
+        <style jsx>{`
+          @keyframes ticker {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .ticker-track {
+            width: max-content;
+          }
+        `}</style>
       </div>
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${rowWidth}px);
-          }
-        }
-      `}</style>
     </section>
   );
 } 

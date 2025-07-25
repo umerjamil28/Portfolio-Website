@@ -47,7 +47,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto py-16 px-4 text-center" id="projects">
+    <section className="max-w-6xl mx-auto py-18 px-4 text-center" id="projects">
       <h3 className="text-4xl font-bold mb-8">Projects</h3>
       <div className="grid md:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
