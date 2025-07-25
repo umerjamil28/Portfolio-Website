@@ -21,16 +21,27 @@ export default function Home() {
     <div className="min-h-screen text-gray-900">
       <Navbar />
 
-      <div style={{backgroundImage: "url('/background.png')",backgroundSize: 'cover',backgroundPosition: 'center',backgroundRepeat: 'no-repeat',}}>
-        <Hero />
- 
-      </div>
-
+    
+      
+      <Hero />  
       <SkillsTicker />
-      <Education />
+      
+      
+      {/* <div style={{backgroundImage: "url('/background.png')",backgroundSize: 'contain',backgroundPosition: 'center',backgroundRepeat: 'no-repeat',}}> */}
+      
+      
+      {/* <Education /> */}
       <Experience />
+      
+      {/* </div> */}
+
+      <div style={{backgroundImage: "url('/background.png')",backgroundSize: 'contain',backgroundPosition: 'center',backgroundRepeat: 'no-repeat',}}>
       <Projects />
       <Contact />
+      
+      </div>
+      
+      
     </div>
   );
 }
