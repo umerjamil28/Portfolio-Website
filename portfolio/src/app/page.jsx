@@ -18,9 +18,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen text-gray-900">
       <Navbar />
-      <Hero />
+
+      <div style={{backgroundImage: "url('/background.png')",backgroundSize: 'cover',backgroundPosition: 'center',backgroundRepeat: 'no-repeat',}}>
+        <Hero />
+ 
+      </div>
+
       <SkillsTicker />
       <Education />
       <Experience />
