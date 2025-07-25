@@ -23,7 +23,7 @@ export default function SkillsTicker() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto pt-18 pb-9 px-4" id="skills">
+    <section className="max-w-6xl mx-auto mt-1 pt-18 pb-9 px-4" id="skills">
       <h3 className="text-4xl font-bold mb-4 text-center">Technical Skills</h3>
       <div className="w-full overflow-hidden bg-white py-8">
         <div className="relative w-full">

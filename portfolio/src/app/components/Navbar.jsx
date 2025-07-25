@@ -10,9 +10,9 @@ export default function Navbar() {
       </div>
       {/* Right: Nav Links */}
       <ul className="flex gap-10 text-gray-900">
-        <li><a href="#projects" className="hover:underline">Projects</a></li>
-        <li><a href="#resume" className="hover:underline">Resume</a></li>
         <li><a href="#experience" className="hover:underline">Experience</a></li>
+        <li><a href="#projects" className="hover:underline">Projects</a></li>
+        {/* <li><a href="#resume" className="hover:underline">Resume</a></li> */}
         <li><a href="#contact" className="hover:underline">Contact</a></li>
       </ul>
     </nav>
