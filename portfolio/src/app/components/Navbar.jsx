@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between px-10 py-6 font-light text-base tracking-wide" style={{boxShadow: 'none', borderBottom: 'none'}}>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between px-10 pt-6 pb-2 font-light text-base tracking-wide" style={{boxShadow: 'none', borderBottom: 'none'}}>
       {/* Left: Email */}
       <div className="flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -10,9 +10,9 @@ export default function Navbar() {
       </div>
       {/* Right: Nav Links */}
       <ul className="flex gap-10 text-gray-900">
-        <li><a href="#projects" className="hover:underline">Works</a></li>
+        <li><a href="#projects" className="hover:underline">Projects</a></li>
         <li><a href="#resume" className="hover:underline">Resume</a></li>
-        <li><a href="#services" className="hover:underline">Services</a></li>
+        <li><a href="#experience" className="hover:underline">Experience</a></li>
         <li><a href="#contact" className="hover:underline">Contact</a></li>
       </ul>
     </nav>

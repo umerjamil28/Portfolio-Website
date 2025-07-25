@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section className="max-w-3xl mx-auto py-16 px-4" id="contact">
-      <h3 className="text-3xl font-bold mb-4 text-blue-700">Contact</h3>
+      <h3 className="text-4xl font-bold mb-4 text-center">Contact</h3>
       <p className="text-lg text-gray-700 mb-6">Let's connect! Feel free to reach out for collaboration or just a friendly hello.</p>
       <div className="flex flex-col md:flex-row gap-4 items-center">
         <a href="mailto:your.email@example.com" className="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-pink-500 transition">Email Me</a>
